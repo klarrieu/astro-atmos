@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>bodies module &mdash; astro-atmos 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=d45e8c67"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            astro-atmos
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="_autosummary/bodies.html">bodies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_autosummary/forecast.html">forecast</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_autosummary/forecast_plot_style.html">forecast_plot_style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_autosummary/k_index.html">k_index</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_autosummary/NWS_met.html">NWS_met</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_autosummary/RDPS_astro.html">RDPS_astro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_autosummary/RDPS_met.html">RDPS_met</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">astro-atmos</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">bodies module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/bodies.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-bodies">
+<span id="bodies-module"></span><h1>bodies module<a class="headerlink" href="#module-bodies" title="Link to this heading"></a></h1>
+<p>Functions for getting the altitude of celestial bodies (e.g. sun, moon) at a given time and location on Earth.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="bodies.get_body_alt">
+<span class="sig-prename descclassname"><span class="pre">bodies.</span></span><span class="sig-name descname"><span class="pre">get_body_alt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">times</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elevation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bodies.get_body_alt" title="Link to this definition"></a></dt>
+<dd><p>Get altitude of celestial body at given time(s), lat/lon</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>times</strong> – datetime(s) of observation</p></li>
+<li><p><strong>lat</strong> (<em>float</em>) – latitude (decimal degrees)</p></li>
+<li><p><strong>lon</strong> (<em>float</em>) – longitude (decimal degrees)</p></li>
+<li><p><strong>elevation</strong> (<em>float</em>) – elevation in meters</p></li>
+<li><p><strong>body_name</strong> (<em>str</em>) – name of celestial body, e.g. ‘sun’, ‘moon’</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>altitude (degrees), same shape as times</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bodies.get_moon_illumination">
+<span class="sig-prename descclassname"><span class="pre">bodies.</span></span><span class="sig-name descname"><span class="pre">get_moon_illumination</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">times</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bodies.get_moon_illumination" title="Link to this definition"></a></dt>
+<dd><p>Get moon phase and percent illuminated from time</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>times</strong> – datetime(s) for desired moon phase</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>phase (str): name of lunar phase</p></li>
+<li><p>illumination percent (float): 0-100 value for percent of moon illuminated</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bodies.next_time_moon_phase">
+<span class="sig-prename descclassname"><span class="pre">bodies.</span></span><span class="sig-name descname"><span class="pre">next_time_moon_phase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_phase</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bodies.next_time_moon_phase" title="Link to this definition"></a></dt>
+<dd><p>Get the next time that the moon is at a given phase</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>target_phase</strong> (<em>str</em>) – One of [‘Full Moon’, ‘New Moon’, ‘First Quarter’, ‘Third Quarter’, ‘Waxing Crescent’,
+‘Waxing Gibbous’, ‘Waning Crescent’, ‘Waning Gibbous’]</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>python datetime object for the next date the moon is at the corresponding phase</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>datetime.datetime</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Kenneth Larrieu.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

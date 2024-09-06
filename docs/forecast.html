@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>forecast module &mdash; astro-atmos 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=d45e8c67"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            astro-atmos
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="_autosummary/bodies.html">bodies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_autosummary/forecast.html">forecast</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_autosummary/forecast_plot_style.html">forecast_plot_style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_autosummary/k_index.html">k_index</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_autosummary/NWS_met.html">NWS_met</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_autosummary/RDPS_astro.html">RDPS_astro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_autosummary/RDPS_met.html">RDPS_met</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">astro-atmos</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">forecast module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/forecast.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-forecast">
+<span id="forecast-module"></span><h1>forecast module<a class="headerlink" href="#module-forecast" title="Link to this heading"></a></h1>
+<p>Methods for generating and plotting a forecast.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="forecast.Forecast">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">forecast.</span></span><span class="sig-name descname"><span class="pre">Forecast</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">forecast_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'./forecast_maps'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">met_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'./met_maps'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temp_unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'F'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wind_unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'mph'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#forecast.Forecast" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class for downloading data from various sources, generating a forecast for a given location,
+and plotting a forecast.
+For downloading site data, see <cite>self.get_latest_RDPS_astro</cite>, <cite>self.get_latest_RDPS_met</cite>.
+For generating forecast at a location, see <cite>self.forecast_location</cite>.
+For plotting, see <cite>self.plot_forecast</cite>.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="forecast.Forecast.forecast_dir">
+<span class="sig-name descname"><span class="pre">forecast_dir</span></span><a class="headerlink" href="#forecast.Forecast.forecast_dir" title="Link to this definition"></a></dt>
+<dd><p>directory to store RDPS model astro outputs</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="forecast.Forecast.met_dir">
+<span class="sig-name descname"><span class="pre">met_dir</span></span><a class="headerlink" href="#forecast.Forecast.met_dir" title="Link to this definition"></a></dt>
+<dd><p>directory to store RDPS model meteorology outputs</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="forecast.Forecast.temp_unit">
+<span class="sig-name descname"><span class="pre">temp_unit</span></span><a class="headerlink" href="#forecast.Forecast.temp_unit" title="Link to this definition"></a></dt>
+<dd><p>‘F’ or ‘C’, indicating unit for temperature measurements</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="forecast.Forecast.wind_unit">
+<span class="sig-name descname"><span class="pre">wind_unit</span></span><a class="headerlink" href="#forecast.Forecast.wind_unit" title="Link to this definition"></a></dt>
+<dd><p>‘mph’ or ‘km/hr’, indicating unit for wind speed measurements</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="forecast.Forecast.forecast_location">
+<span class="sig-name descname"><span class="pre">forecast_location</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timezone</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elevation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#forecast.Forecast.forecast_location" title="Link to this definition"></a></dt>
+<dd><p>Generate forecast for a given location</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lat</strong> (<em>float</em>) – latitude of forecast location</p></li>
+<li><p><strong>lon</strong> (<em>float</em>) – longitude of forecast location</p></li>
+<li><p><strong>pytz.timezone</strong> (<em>timezone</em><em> (</em><em>str or</em>) – timezone for location</p></li>
+<li><p><strong>elevation</strong> (<em>float</em>) – elevation of location in meters (default: 0)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Forecast data for the given location/timezone</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>self.forecast (dict)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="forecast.Forecast.get_closest_grid_point">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_closest_grid_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lon</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#forecast.Forecast.get_closest_grid_point" title="Link to this definition"></a></dt>
+<dd><p>Get data at closest point on model grid to given lat/lon (calculated in EPSG 3857 Web Mercator) for xarray ds</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ds</strong> (<em>xarray.Dataset</em>) – xarray dataset with ‘latitude’ and ‘longitude’ coordinates</p></li>
+<li><p><strong>lat</strong> (<em>float</em>) – latitude of desired point</p></li>
+<li><p><strong>lon</strong> (<em>float</em>) – longitude of desired point</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>dataset subset to the grid cell closest to the given lat/lon point.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>xarray.Dataset</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="forecast.Forecast.plot_forecast">
+<span class="sig-name descname"><span class="pre">plot_forecast</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#forecast.Forecast.plot_forecast" title="Link to this definition"></a></dt>
+<dd><p>Plot forecast using matplotlib (must have already run self.forecast_location).</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Kenneth Larrieu.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
