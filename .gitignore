@@ -1,0 +1,6 @@
+__pycache__/
+.idea/
+met_maps/
+forecast_maps/
+*.png
+*.jpg

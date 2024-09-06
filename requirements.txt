@@ -1,0 +1,10 @@
+matplotlib
+pandas
+geopandas
+ecmwflibs
+cfgrib
+xarray
+scipy
+astropy
+pytz
+beautifulsoup4

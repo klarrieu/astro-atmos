@@ -1,0 +1,15 @@
+[Location]
+# latitude, decimal degrees
+lat = 39.236
+# longitude, decimal degrees
+lon = -120.026
+# timezone name, see reference: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone = US/Pacific
+# elevation in meters
+elevation = 0
+
+[Units]
+# temperature unit: C or F
+temp_unit = F
+# wind speed unit: km/hr or mph
+wind_unit = mph

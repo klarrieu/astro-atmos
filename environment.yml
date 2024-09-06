@@ -1,0 +1,12 @@
+channels:
+  - conda-forge
+dependencies:
+  - matplotlib
+  - pandas
+  - geopandas
+  - cfgrib
+  - xarray
+  - scipy
+  - astropy
+  - pytz
+  - beautifulsoup4
