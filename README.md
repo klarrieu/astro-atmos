@@ -17,7 +17,7 @@ Example forecast:
 
 - **Cloud Cover**:
   ![cloud cover scale](./astroatmos/icons/cloud_cover_scale.png)
-- **Probability of Precipitation**: dark grey bars are shown on top of the cloud cover plot. Height of the bar corresponds to probability of precipitation from 0% (no bar) to 100% (bar fills full plot height). For example, in the example forecast above, we see a maximuim precipitation probability of ~20-25% on Friday afternoon.
+- **Probability of Precipitation**: dark grey bars are shown on top of the cloud cover plot. Height of the bar corresponds to probability of precipitation from 0% (no bar) to 100% (bar fills full plot height). For example, in the example forecast above, we see a maximuim precipitation probability of ~20% on Wednesday afternoon.
 - **Transparency**: 1-5 scale representing the overall transparency of the atmosphere. Transparency is indicated using the same color scale as Seeing (below).
 - [**Seeing**](https://www.canada.ca/en/environment-climate-change/services/weather-general-tools-resources/astronomy/seeing-forecast.html): 1-5 scale representing how clearly objects can be resolved for astronomical observation due to the effects of atmospheric turbulence. Poor seeing corresponds to "boiling" images and poor angular resolution. Seeing is indicated using the same color scale as Transparency.
    ![seeing/transparency scale](./astroatmos/icons/seeing_transparency_scale.png)
