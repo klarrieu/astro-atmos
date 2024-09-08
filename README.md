@@ -97,6 +97,7 @@ Example forecast:
 - lowpass filter temp for low/high annotation
 - add options for 12/24 hr times, light/dark styles
 - make subplots modular (separate method per subplot)
+- more robust http requests with retries, checking data integrity
 
 
 ## Data sources
