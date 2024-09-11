@@ -94,6 +94,7 @@ Example forecast:
 ## Additional work-in-progress:
 - add smoke data source
 - add weather forecasts for Canada
+- grab local timezone from system
 - lowpass filter temp for low/high annotation
 - add options for 12/24 hr times, light/dark styles
 - make subplots modular (separate method per subplot)
