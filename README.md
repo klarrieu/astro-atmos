@@ -94,9 +94,11 @@ Example forecast:
 ## Additional work-in-progress:
 - add smoke data source
 - add weather forecasts for Canada
+- annotate times for sunrise/sunset
 - lowpass filter temp for low/high annotation
 - add options for 12/24 hr times, light/dark styles
 - make subplots modular (separate method per subplot)
+- make web app interface (streamlit?)
 - more robust http requests with retries, checking data integrity
 
 
