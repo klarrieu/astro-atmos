@@ -70,9 +70,9 @@ Example forecast:
     lat = 39.2
     # longitude, decimal degrees
     lon = -120.4
-    # timezone name, see reference: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+    # timezone name,timezone name, IANA format (optional, defaults to system timezone)
     timezone = US/Pacific
-    # elevation in meters
+    # elevation in meters (optional, defaults to 0)
     elevation = 0
     ```
     
@@ -94,7 +94,6 @@ Example forecast:
 ## Additional work-in-progress:
 - add smoke data source
 - add weather forecasts for Canada
-- grab local timezone from system
 - lowpass filter temp for low/high annotation
 - add options for 12/24 hr times, light/dark styles
 - make subplots modular (separate method per subplot)

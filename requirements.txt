@@ -7,4 +7,5 @@ xarray
 scipy
 astropy
 pytz
+tzlocal
 beautifulsoup4
