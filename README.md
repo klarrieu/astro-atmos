@@ -50,7 +50,7 @@ Example forecast:
    ### Option 2: Using `mamba`/`conda` (creating new environment):
 
    ```commandline
-   mamba create -n <env-name> --file environment.yml
+   mamba env create -n <env-name> --file environment.yml
    mamba activate <env-name>
    ```
 
